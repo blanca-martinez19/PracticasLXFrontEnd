@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./pokedex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <input type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+    <button onclick="fetchPokemon()">Mostrar informacion</button> 
+    <div id="pokeInfo" class="pokeInfo">
+        <img src="./not-found.png" alt="Pokemon" id="pokeImg">
+        <div class="data">
+            <h2 id="pokeNameLabel" class="pokename">Busca tu pokemon</h2>
+            <div id="types"></div>
+            <p>Moves:</p>
+            <div id="moves"></div>
+        </div>
+    </div>
+    <div id="stats" class="stats">
+    </div>
+    <div class="bg"></div>
+</body>
+<footer>
+    <script src="./pokedex.js"></script>
+</footer>
+</html>
