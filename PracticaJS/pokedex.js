@@ -22,7 +22,7 @@ const fetchPokemon = () => {
             console.log(data);
         
             const pokeObj={
-                img : data.sprites.front_default,
+                img : data.sprites.other['official-artwork']['front_default'],
                 name : data.name,
                 type: data.types.map(item => item.type.name),
                 stats: data.stats.map(
