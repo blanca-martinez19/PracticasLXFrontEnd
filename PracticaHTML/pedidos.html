@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bcakes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        h1{
+            color: rgb(85, 3, 66);
+            font-size: 40px;
+        }
+
+        /* Estilo de header */
+        header {
+            background: url('cakelogo.png')  no-repeat right #faf689;  
+            padding: 30px;
+            text-align: center;
+            background-size: 150px;
+            height: 100px;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 20%;
+            height: 350px;
+            /* only for demonstration, should be removed */
+            background: rgb(216, 179, 211);
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 0px 0px 0px 20px;
+            width: 80%;
+            height: 350px;
+            background-color: #f1f1f1;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: rgb(54, 44, 0);
+            padding: 10px;
+            text-align: left;
+            color: white;
+            font-size: 10px;
+            height: 110px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-height: 270px;
+            overflow: scroll;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #8a2b06;
+            padding: 1rem 0;
+            margin: 1rem 0;
+        }
+        .summary {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #8a2b06;
+        }
+        
+        .form-control {
+            margin: 0.5rem 0;
+        }
+        
+        .form-control label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control input {
+            display: block;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            font: inherit;
+            line-height: 1.5rem;
+            padding: 0 0.25rem;
+        }
+        
+        .form-control input:focus {
+            outline: none;
+            background: #fad0ec;
+            border-color: #8b005d;
+        }
+        
+        .form-control.invalid input {
+            border-color: red;
+            background: #ffd7d7;
+        }
+        
+        .form-control.invalid label {
+            color: red;
+        }
+
+        table, th, td{
+            border: 1px solid;  
+        }
+    </style>
+    <!-- fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Bcakes</h1>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="disponibilidad.html">Disponibilidad</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2>Pedidos</h2>
+            <div>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Descripcion del pastel</th>
+                        <th>Sabores</th>
+                        <th>Adornos</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>22222222222</td>
+                        <td>alfred@gmail.com</td>
+                        <td>Pastel cuadrado de dos sabores</td>
+                        <td>Chocolate</td>
+                        <td>Ninguna</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Anders</td>
+                        <td>22226666272</td>
+                        <td>maria@gmail.com</td>
+                        <td>Pastel de dos pisos</td>
+                        <td>Fresa y chocolate</td>
+                        <td>Flor y balon</td>
+                    </tr>
+                    <tr>
+                        <td>German Filomeno</td>
+                        <td>66666288828</td>
+                        <td>german@gmail.com</td>
+                        <td>Pastel infantils</td>
+                        <td>Vainilla</td>
+                        <td>Flor</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <h3>Backes 2022®</h3>
+        <p>Calle inventada 56757 Col Villa de Sol, Mexico</p>
+        <p>Tel. 222 200 0383  e-mail: bcakes@correo.com</p>
+        <p>Horario de atención: Luneas a Domingo de 8:00am a 10:pm</p>
+    </footer>
+
+</body>
+
+</html>
